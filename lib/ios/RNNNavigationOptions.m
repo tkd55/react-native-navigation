@@ -138,6 +138,9 @@ const NSInteger BLUR_TOPBAR_TAG = 78264802;
 		if (self.tabBar.currentTabIndex) {
 			[viewController.tabBarController setSelectedIndex:[self.tabBar.currentTabIndex unsignedIntegerValue]];
 		}
+		if (self.tabBar.currentTabContainerID) {
+			[(RNNTabBarController*)viewController.tabBarController setSelectedIndexByContainerID:self.tabBar.currentTabContainerID];
+		}
 	}
 	
 	if (self.statusBarBlur) {
