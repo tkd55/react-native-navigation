@@ -37,7 +37,7 @@ class TextScreen extends Component {
   }
 
   onClickSwitchToTab() {
-    if (this.props.containerId === "Container5") {
+    if (this.props.containerId === 'Container5') {
       Navigation.setOptions(this.props.containerId, {
         tabBar: {
           currentTabIndex: 1
@@ -46,7 +46,7 @@ class TextScreen extends Component {
     } else {
       Navigation.setOptions(this.props.containerId, {
         tabBar: {
-          currentTabContainerID: "Container5"
+          currentTabContainerID: 'Container5'
         }
       });
     }
