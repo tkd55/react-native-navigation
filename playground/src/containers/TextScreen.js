@@ -37,13 +37,22 @@ class TextScreen extends Component {
   }
 
   onClickSwitchToTab() {
-    Navigation.setOptions(this.props.containerId, {
-      tabBar: {
-        currentTabIndex: 1
-      }
-    });
+    if (this.props.containerId === "Container5") {
+      Navigation.setOptions(this.props.containerId, {
+        tabBar: {
+          currentTabIndex: 1
+        }
+      });
+    } else {
+      Navigation.setOptions(this.props.containerId, {
+        tabBar: {
+          currentTabContainerID: "Container5"
+        }
+      });
+    }
   }
 }
+
 module.exports = TextScreen;
 
 const styles = {
